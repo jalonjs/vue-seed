@@ -16,20 +16,19 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped rel="stylesheet/scss" lang="scss">
   ul {
     padding: 0.4rem;
-  }
-  
-  li {
-    list-style-type: none;
-    margin-bottom: 0.3rem;
-    height: 1rem;
-  }
-  .delete-btn {
-    background: #fff;
-    padding: 0.2rem 0.4rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    li {
+      list-style-type: none;
+      margin-bottom: 0.3rem;
+      height: 1rem;
+      .delete-btn {
+        background: #fff;
+        padding: 0.2rem 0.4rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
   }
 </style>
