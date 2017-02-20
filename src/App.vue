@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <img :src="logo" class="logo">
+    <!--<img :src="logo" class="logo">-->
     <Action btnText="添加" :addHandle="addHandle"></Action>
-    <div class="loading" v-if="loading">
-      Loading...
+    <div class="list-wrapper">
+      <div class="loading" v-if="loading">
+        Loading...
+      </div>
+      <List :items="items" :del="del" v-else="!loading"></List>
     </div>
-    <List :items="items" :del="del" v-else="!loading"></List>
-    <p>
+    <p class="footer">
       <router-link to="/foo/888">Go to Foo</router-link>
       <router-link to="/bar">Go to Bar</router-link>
     </p>
@@ -38,7 +40,7 @@
       //   })()
       // } catch (e) {
       //   console.log(e)
-      // }
+      // }'
 
       API.getTaskList(this).then(response => {
         this.$store.state.items = response.body
@@ -78,7 +80,28 @@
     margin-top: 60px;
   }
   
+  .list-wrapper {
+    width: 8rem;
+    min-height: 2rem;
+    position: relative;
+    margin: 1rem auto;
+    font-size: 0.5rem;
+    background: #eeeeee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .loading {
+    font-size: 0.5rem;
+    color: #333;
+    margin-top: 0.6rem;
+  }
+  
   .logo {
     width: 2rem;
+  }
+  
+  .footer {
+    font-size: 0.6rem;
   }
 </style>

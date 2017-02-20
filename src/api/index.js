@@ -7,7 +7,7 @@ Vue.use(VueResource)
 const API = {
     // 获得任务列表
     getTaskList: function(self) {
-        return self.$http.get('http://localhost:3000/tasks', {foo: 'bar'})
+        return self.$http.get(location.origin.replace(/:8899/, '') + ':3000/tasks', {foo: 'bar'})
     }
 }
 

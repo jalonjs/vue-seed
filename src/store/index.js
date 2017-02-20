@@ -20,9 +20,9 @@ const store = new Vuex.Store({
   },
   actions: {
     delAsync(state, index) {
-      setTimeout(function () {
+      // setTimeout(function () {
         state.commit('del', index)
-      }, 2000)
+      // }, 2000)
     }
   },
   computed: {
