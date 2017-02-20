@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!--<img :src="logo" class="logo">-->
+    <img :src="logo" class="logo">
     <Action btnText="添加" :addHandle="addHandle"></Action>
     <div class="list-wrapper">
       <div class="loading" v-if="loading">
