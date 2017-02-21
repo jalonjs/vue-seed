@@ -6,6 +6,8 @@
 </template>
 
 <script>
+  import focus from '../directives/focus'
+
   export default {
     name: 'Action',
     props: ['btnText', 'addHandle'],
@@ -30,11 +32,7 @@
       }
     },
     directives: {
-      focus: {
-        inserted: function (el) {
-          el.focus()
-        }
-      }
+      focus
     }
   }
 
@@ -45,12 +43,14 @@
   .input-box {
     width: 100%;
   }
+  
   input {
     border: 1px solid #ccc;
     width: 4rem;
     padding: 0.2rem;
     border-radius: 4px;
   }
+  
   button {
     background: #fff;
     padding: 0.2rem 0.6rem;
